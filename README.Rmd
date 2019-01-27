@@ -1,0 +1,73 @@
+---
+output:
+  github_document:
+    html_preview: true
+---
+
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+
+# The `SomaReadr` package
+
+
+
+
+## Overview
+
+Add general overview of the package here ...
+
+
+----------------------------
+
+## Installation
+
+You can currently install `SomaReadr` directly from the command line:
+```
+R --vanilla CMD INSTALL SomeReadr
+```
+
+However, future local repositories will allow typical command from within R:
+
+```{r, eval = FALSE}
+install.packages("SomaReadr")
+```
+
+
+
+
+## Usage
+
+To load the `somaverse` simply make a call to `library()` as usual:
+
+```{r}
+library(SomaReadr)
+```
+
+### Here are some bullet points
+
+* The `SomaReadr` package is easy to use.
+
+* There is some cool stuff we can do.
+
+* Here is a link [bitbucket](http://stash.sladmin.com/projects/BFX/repos/r/browse)
+
+
+
+#### LICENSE
+
+Please note that this SomaLogic, Inc. internal package is released with 
+a [LICENSE](LICENSE). By using in this package you agree to abide by its terms.
+
+
+####
+Created on `r Sys.Date()` by the [Rmarkdown package](https://github.com/rstudio/rmarkdown) (v`r utils::packageVersion("rmarkdown")`) and `r R.version$version.string`. 

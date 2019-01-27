@@ -1,0 +1,28 @@
+Package: Test
+Type: Package
+Title: Just a testing ground
+Version: 0.0.9000
+Authors@R: c(
+  person("Stu", "Field", email = "sfield@somalogic.com", role=c("aut","cre"))
+  )
+Description: Just a test package to debug.
+License: GPL-3 | file LICENSE
+Depends:
+  R (>= 3.5.0)
+Imports:
+  purrr
+Suggests:
+    rmarkdown (>= 1.10),
+    knitr,
+    testthat
+Enhances:
+  SomaPCA
+X-CRAN-COMMENT: Blah blah blah
+LazyLoad: true
+LazyData: true
+Language: en-US
+URL: www.somalogic.com
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
+Encoding: UTF-8
+VignetteBuilder: knitr

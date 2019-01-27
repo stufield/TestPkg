@@ -1,0 +1,6 @@
+Test.log
+data-raw
+^README\.md$
+^_pkgdown\.yml$
+^.*\.Rproj$
+^\.Rproj\.user$
