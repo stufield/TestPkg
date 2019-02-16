@@ -1,5 +1,4 @@
 
-
 camelCaseFunction <- function(x) {
-  cat(x)
+  message(x)
 }

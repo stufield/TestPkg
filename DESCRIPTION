@@ -1,28 +1,35 @@
 Package: Test
 Type: Package
-Title: Just a testing ground
-Version: 0.0.9000
+Title: A Testing Ground
+Version: 0.0.0.9000
 Authors@R: c(
-  person("Stu", "Field", email = "sfield@somalogic.com", role=c("aut","cre"))
-  )
-Description: Just a test package to debug.
+    person(given = "Stu",
+           family = "Field",
+           role = c("aut", "cre"),
+           email = "sfield@somalogic.com")
+    )
+Description: Just a test package to debug devtools and builds.
 License: GPL-3 | file LICENSE
 Depends:
-  R (>= 3.5.0)
+  R (>= 3.5.0), magrittr
 Imports:
   purrr
 Suggests:
-    rmarkdown (>= 1.10),
-    knitr,
-    testthat
+  spelling (>= 1.2),
+  usethis (>= 1.4.0),
+  devtools (>= 2.0.1),
+  knitr (>= 1.17),
+  rmarkdown (>= 1.10),
+  roxygen2 (>= 6.1.0),
+  testthat (>= 2.0.0)
 Enhances:
-  SomaPCA
-X-CRAN-COMMENT: Blah blah blah
+  SomaPlyr
+X-CRAN-COMMENT: **add extra comments here**
 LazyLoad: true
 LazyData: true
 Language: en-US
-URL: www.somalogic.com
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
 Encoding: UTF-8
 VignetteBuilder: knitr
+URL: www.google.com
+RoxygenNote: 6.1.1
+Roxygen: list(markdown = TRUE)

@@ -1,6 +1,6 @@
 Test.log
 data-raw
-^README\.md$
+^README\.Rmd$
 ^_pkgdown\.yml$
 ^.*\.Rproj$
 ^\.Rproj\.user$

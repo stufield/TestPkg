@@ -1,0 +1,13 @@
+
+# ignore anything doc (i.e. vignettes)
+inst/doc/*
+
+# ignore all RStudio project related files
+.Rproj.user
+\.DS_Store
+\.Rhistory
+^r\\.Rproj$
+
+# ignore all packrat related files
+.project
+packrat/lib*/
