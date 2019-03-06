@@ -1,4 +1,4 @@
-Package: Test
+Package: TestPkg
 Type: Package
 Title: A Testing Ground
 Version: 0.0.0.9000

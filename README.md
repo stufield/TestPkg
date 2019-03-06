@@ -1,38 +1,37 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# The `Test` package
+# The `TestPkg` package
 
 ## Overview
 
-Add general overview of the package here …
+Just a test package to debug devtools and builds.
 
 -----
 
 ## Installation
 
-You can currently install `Test` directly from the command line:
+You can currently install `TestPkg` directly from the command line:
 
-    R --vanilla CMD INSTALL Test
+    R --vanilla CMD INSTALL TestPkg
 
-However, future local repositories will allow typical command from
-within R:
+Or directly from GitHub with:
 
 ``` r
-install.packages("Test")
+devtools::install_github("stufield/TestPkg")
 ```
 
 ## Usage
 
-To load the `somaverse` simply make a call to `library()` as usual:
+To load `TestPkg` simply make a call to `library()` as usual:
 
 ``` r
-library(Test)
+library(TestPkg)
 ```
 
 ## Notes about the package
 
-  - The `Test` package is easy to use.
+  - The `TestPkg` package is easy to use.
 
   - There is some cool stuff we can do.
 
