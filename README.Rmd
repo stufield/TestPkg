@@ -15,9 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 
-# The `SomaReadr` package
-
-
+# The `Test` package
 
 
 ## Overview
@@ -25,19 +23,19 @@ knitr::opts_chunk$set(
 Add general overview of the package here ...
 
 
-----------------------------
+----------------
 
 ## Installation
 
-You can currently install `SomaReadr` directly from the command line:
+You can currently install `Test` directly from the command line:
 ```
-R --vanilla CMD INSTALL SomeReadr
+R --vanilla CMD INSTALL Test
 ```
 
 However, future local repositories will allow typical command from within R:
 
 ```{r, eval = FALSE}
-install.packages("SomaReadr")
+install.packages("Test")
 ```
 
 
@@ -47,18 +45,18 @@ install.packages("SomaReadr")
 
 To load the `somaverse` simply make a call to `library()` as usual:
 
-```{r}
-library(SomaReadr)
+```{r, eval = FALSE}
+library(Test)
 ```
 
-### Here are some bullet points
+## Notes about the package
 
-* The `SomaReadr` package is easy to use.
+* The `Test` package is easy to use.
 
 * There is some cool stuff we can do.
 
-* Here is a link [bitbucket](http://stash.sladmin.com/projects/BFX/repos/r/browse)
 
+-----------------
 
 
 #### LICENSE

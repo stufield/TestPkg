@@ -1,4 +1,5 @@
 data-raw
+prepNorm_speed_test.R
 ^README\.Rmd$
 ^_pkgdown\.yml$
 ^.*\.Rproj$

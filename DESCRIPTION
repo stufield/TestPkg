@@ -3,17 +3,19 @@ Type: Package
 Title: A Testing Ground
 Version: 0.0.0.9000
 Authors@R: c(
-    person(given = "Stu",
-           family = "Field",
-           role = c("aut", "cre"),
-           email = "sfield@somalogic.com")
-    )
+  person(given = "Stu",
+         family = "Field",
+         role = c("aut", "cre"),
+         email = "sfield@somalogic.com")
+  )
 Description: Just a test package to debug devtools and builds.
 License: GPL-3 | file LICENSE
 Depends:
-  R (>= 3.5.0), magrittr
+  R (>= 3.5.0)
 Imports:
-  purrr
+  purrr (>= 0.3.0),
+  magrittr,
+  dplyr (>= 0.8.0),
 Suggests:
   spelling (>= 1.2),
   usethis (>= 1.4.0),
