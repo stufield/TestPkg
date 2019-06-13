@@ -6,6 +6,7 @@ test_that("test failure control", {
 })
 
 test_that("sort() ignores case", {
+  skip("turn off")
   x <- c("Aaron", "Zack", "nancy")
   expect_equal(sort(x), c("Aaron", "nancy", "Zack"))
 })
