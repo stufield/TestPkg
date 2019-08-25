@@ -1,5 +1,7 @@
 ---
-output: github_document
+output: 
+  github_document:
+    html_preview: true
 ---
 
 
@@ -16,10 +18,15 @@ knitr::opts_chunk$set(
 
 
 # The `TestPkg` package
+* [x] checkbox
+* [ ] checkbox
+* bullet
+
+
+----------------
 
 
 ## Overview
-
 Just a test package to debug devtools and builds.
 
 

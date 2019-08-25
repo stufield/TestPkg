@@ -3,6 +3,12 @@
 
 # The `TestPkg` package
 
+  - \[x\] checkbox
+  - \[ \] checkbox
+  - bullet
+
+-----
+
 ## Overview
 
 Just a test package to debug devtools and builds.
@@ -13,7 +19,9 @@ Just a test package to debug devtools and builds.
 
 You can currently install `TestPkg` directly from the command line:
 
-    R --vanilla CMD INSTALL TestPkg
+``` bash
+R --vanilla CMD INSTALL TestPkg
+```
 
 Or directly from GitHub with:
 
@@ -45,6 +53,5 @@ terms.
 
 -----
 
-Created on 2019-03-06 by
-[Rmarkdown](https://github.com/rstudio/rmarkdown) (v1.11) and R version
-3.5.2 (2018-12-20).
+Created by [Rmarkdown](https://github.com/rstudio/rmarkdown) (v1.11) and
+R version 3.5.2 (2018-12-20).
