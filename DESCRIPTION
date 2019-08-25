@@ -18,13 +18,14 @@ Imports:
     dplyr (>= 0.8.0),
     rlang (>= 0.1.2)
 Suggests:
-  spelling (>= 1.2),
-  usethis (>= 1.4.0),
-  devtools (>= 2.0.1),
-  knitr (>= 1.17),
-  rmarkdown (>= 1.10),
-  roxygen2 (>= 6.1.0),
-  testthat (>= 2.0.0)
+    spelling (>= 1.2),
+    usethis (>= 1.4.0),
+    devtools (>= 2.0.1),
+    knitr (>= 1.17),
+    rmarkdown (>= 1.10),
+    roxygen2 (>= 6.1.0),
+    testthat (>= 2.0.0),
+    covr
 Enhances:
   SomaPlyr
 X-CRAN-COMMENT: **add extra comments here**

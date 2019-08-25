@@ -9,4 +9,3 @@
 #' the data/ directory directly.
 #' @name test
 NULL
-

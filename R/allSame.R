@@ -1,8 +1,8 @@
 
 #' All Values Same
 #'
-#' Returns a logical as to whether all values *within* a vector 
-#' are identical. This function does NOT compare two independent 
+#' Returns a logical as to whether all values *within* a vector
+#' are identical. This function does NOT compare two independent
 #' vectors. Please use \code{link{all.equal}},
 #' for such a purpose combined with \code{\link{isTRUE}}.
 #'
@@ -28,10 +28,10 @@ allSame <- function(x) UseMethod("allSame")
 #' @noRd
 #' @export
 allSame.numeric <- function(x) {
-  if ( all(floor(x) == x, na.rm = TRUE) ) {  # if integer
+  if (all(floor(x) == x, na.rm = TRUE)) { # if integer
     isTRUE(all(diff(x[!is.na(x)]) == 0))
-  } else {# if float
-    isTRUE(sum(diff(x[!is.na(x)])) < .Machine$double.eps ^ 0.5)
+  } else { # if float
+    isTRUE(sum(diff(x[!is.na(x)])) < .Machine$double.eps^0.5)
   }
 }
 
@@ -59,4 +59,3 @@ allSame.factor <- function(x) {
 allSame.logical <- function(x) {
   allSame(as.numeric(x))
 }
-

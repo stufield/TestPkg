@@ -1,6 +1,6 @@
 # ------------------------------------------
-# We do not want to import all of dplyr, 
-# so we must re-export the dplyr::filter() generic so that it is 
+# We do not want to import all of dplyr,
+# so we must re-export the dplyr::filter() generic so that it is
 # available on the search path for proper method dispatch.
 # So we importFrom first, then re-export
 # ------------------------------------------
@@ -18,4 +18,3 @@
 #' @export
 #' @usage filter(.data, ..., .preserve = FALSE)
 NULL
-
