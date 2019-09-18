@@ -28,23 +28,22 @@ calcCCC <- function(x, y) {
   sdy <- sd(y)
   rho <- stats::cor(x, y, method = "pearson")
   v <- sdx / sdy # scale shift
-  # u  <- (mean(x) - mean(y)) / sqrt(sdx * sdy)    # location shift relative to scale
   sx2 <- var(x) * (k - 1) / k
   sy2 <- var(y) * (k - 1) / k
-  u <- (mean(x) - mean(y)) / ((sx2 * sy2)^0.25) # location shift relative to scale
-  Cb <- ((v + 1 / v + u^2) / 2)^-1
+  u <- ( mean(x) - mean(y) ) / ( (sx2 * sy2)^0.25 ) # location shift relative to scale
+  Cb <- ( (v + 1 / v + u^2) / 2 )^-1
   pc <- rho * Cb
 
-  sep <- sqrt(((1 - ((rho)^2)) * (pc)^2 * (1 - ((pc)^2)) / (rho)^2 +
-    (2 * (pc)^3 * (1 - pc) * (u)^2 / rho) - 0.5 * (pc)^4 * (u)^4 / (rho)^2) / (k - 2))
+  sep <- sqrt( ( (1 - rho^2 ) * pc^2 * ( 1 - pc^2 ) / rho^2 +
+    (2 * pc^3 * (1 - pc) * u^2 / rho) - 0.5 * pc^4 * u^4 / rho^2) / (k - 2) )
 
-  Z <- 0.5 * log((1 + pc) / (1 - pc))
+  Z    <- 0.5 * log( (1 + pc) / (1 - pc) )
   pval <- 2 * stats::pnorm(-abs(Z))
-  set <- sep / (1 - ((pc)^2))
-  N. <- 1 - (0.05 / 2) # default 95%
-  up <- Z + stats::qnorm(N.) * set
-  lo <- Z - stats::qnorm(N.) * set
-  lo <- (exp(2 * lo) - 1) / (exp(2 * lo) + 1)
-  up <- (exp(2 * up) - 1) / (exp(2 * up) + 1)
+  set  <- sep / ( 1 - (pc^2) )
+  N.   <- 1 - (0.05 / 2) # default 95%
+  up   <- Z + stats::qnorm(N.) * set
+  lo   <- Z - stats::qnorm(N.) * set
+  lo   <- (exp(2 * lo) - 1) / (exp(2 * lo) + 1)
+  up   <- (exp(2 * up) - 1) / (exp(2 * up) + 1)
   list(rho.c = pc, ci95 = c(lower = lo, upper = up), Z = Z, p.value = pval)
 }

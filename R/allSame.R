@@ -19,24 +19,26 @@
 #' allSame(letters)
 #' allSame(c(TRUE, TRUE, TRUE))
 #' allSame(c(TRUE, TRUE, FALSE))
+#' @importFrom purrr map_lgl
 #' @export allSame
 allSame <- function(x) UseMethod("allSame")
 
 
-# S3 allSame method for numeric
-
+#' S3 allSame method for numeric
+#'
 #' @noRd
 #' @export
 allSame.numeric <- function(x) {
-  if (all(floor(x) == x, na.rm = TRUE)) { # if integer
-    isTRUE(all(diff(x[!is.na(x)]) == 0))
-  } else { # if float
-    isTRUE(sum(diff(x[!is.na(x)])) < .Machine$double.eps^0.5)
+  # if integer
+  if ( all(floor(x) == x, na.rm = TRUE) ) {
+    isTRUE(diff(range(x, na.rm = TRUE)) == 0)
+  } else {
+    isTRUE(diff(range(x, na.rm = TRUE)) < .Machine$double.eps^0.5)
   }
 }
 
-# S3 allSame method for character
-
+#' S3 allSame method for character
+#'
 #' @noRd
 #' @importFrom purrr map_lgl
 #' @export
@@ -44,16 +46,16 @@ allSame.character <- function(x) {
   isTRUE(all(purrr::map_lgl(x, function(i) i == x[1])))
 }
 
-# S3 allSame  method for factor
-
+#' S3 allSame method for factor
+#'
 #' @noRd
 #' @export
 allSame.factor <- function(x) {
   allSame(as.character(x))
 }
 
-# S3 allSame method for logical
-
+#' S3 allSame method for logical
+#'
 #' @noRd
 #' @export
 allSame.logical <- function(x) {
