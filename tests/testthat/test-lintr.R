@@ -1,16 +1,24 @@
-if (requireNamespace("lintr", quietly = TRUE)) {
-  context("Static Code Style Compliance Linter")
-  test_that("The somaverse is in style compliance", {
-    print(fs::dir_ls())
-    print(Sys.getenv("NOT_CRAN"))
-    Sys.setenv(NOT_CRAN = "true")
-    lints <- lintr::lint_package()
-    has_lints <- length(lints) > 0
-    print(has_lints)
-    lint_output <- NULL
-    if (has_lints) {
-      lint_output <- paste(collapse = "\n", capture.output(print(lints)))
+context("Static Code Style Compliance Linter")
+if ( utils::packageVersion("testthat") < "2.2.0" ) {
+  skip_on_covr <- function()  {
+    if ( !identical(Sys.getenv("R_COVR"), "true") ) {
+      return(invisible(TRUE))
     }
-    expect(!has_lints, paste("Not lint free", lint_output, sep = "\n"))
-  })
+    skip("On covr")
+  }
 }
+test_that("TestPkg is in style compliance", {
+  # lintr::expect_lint_free()
+  skip_on_cran()     # don't run in check()
+  skip_on_covr()     # don't run if in 'covr'
+  skip_if_not_installed("lintr")
+  lints <- lintr::lint_package()
+  expect_length(lints, 0)
+  if ( interactive() ) {
+    files <- names(lints) %>%
+      unique() %>%
+      basename() %>%
+      paste0(collapse = ", ")
+    message("Please lint the following files: ", files)
+  }
+})
