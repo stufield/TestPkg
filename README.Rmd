@@ -46,8 +46,8 @@ lintage <- sprintf("https://img.shields.io/badge/lints-%i-%s.svg?style=flat&logo
 
 ## Here are some check boxes
 
-* [x] checkbox
-* [ ] checkbox
+- [x] checkbox
+- [ ] checkbox
 * bullet
 
 
