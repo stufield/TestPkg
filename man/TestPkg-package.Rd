@@ -13,21 +13,21 @@ Just a test package to debug devtools and builds.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{www.google.com}
+  \item \url{http://github.com/stufield}
 }
 
 
 Useful links:
 \itemize{
-  \item \url{www.google.com}
+  \item \url{http://github.com/stufield}
 }
 
 }
 \author{
-\strong{Maintainer}: Stu Field \email{sfield@somalogic.com}
+\strong{Maintainer}: Stu Field \email{stu.g.field@gmail.com}
 
 
-\strong{Maintainer}: Stu Field \email{sfield@somalogic.com}
+\strong{Maintainer}: Stu Field \email{stu.g.field@gmail.com}
 
 }
 \keyword{internal}

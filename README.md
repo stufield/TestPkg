@@ -3,6 +3,20 @@
 
 # The `TestPkg` package
 
+<!-- badges: start -->
+
+[![build](https://img.shields.io/badge/build-passing-success.svg?logo=travis)](http://bitbucket.sladmin.com/projects/SV/repos/somareadr/commits)
+![coverage](https://img.shields.io/badge/coverage-40.7%25-critical.svg?style=flat&logo=codecov)
+![lint](https://img.shields.io/badge/lints-0-success.svg?style=flat&logo=gitlab)
+[![docs](https://img.shields.io/badge/docs-passing-success.svg)](http://bitbucket.sladmin.com/projects/SV/repos/somareadr/browse)
+[![License:
+GPL-3](https://img.shields.io/badge/License-GPL3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+<!-- badges: end -->
+
+-----
+
+## Here are some check boxes
+
   - \[x\] checkbox
   - \[ \] checkbox
   - bullet

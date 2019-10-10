@@ -14,10 +14,38 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "README-"
 )
+cvr      <- covr::percent_coverage(covr::package_coverage())
+coverage <- sprintf("https://img.shields.io/badge/coverage-%0.1f%%25-%s.svg?style=flat&logo=codecov",
+                 cvr,
+                 ifelse(cvr < 75,
+                        ifelse(cvr < 50, "critical", "yellow"),
+                        "success"))
+lints   <- length(lintr::lint_package("."))
+lintage <- sprintf("https://img.shields.io/badge/lints-%i-%s.svg?style=flat&logo=gitlab",
+                   lints,
+                   ifelse(lints > 5,
+                          ifelse(lints > 25, "critical", "yellow"),
+                          "success"))
 ```
 
 
 # The `TestPkg` package
+
+<!-- badges: start -->
+[![build](https://img.shields.io/badge/build-passing-success.svg?logo=travis)](http://bitbucket.sladmin.com/projects/SV/repos/somareadr/commits)
+![coverage](`r coverage`)
+![lint](`r lintage`)
+[![docs](https://img.shields.io/badge/docs-passing-success.svg)](http://bitbucket.sladmin.com/projects/SV/repos/somareadr/browse)
+[![License: GPL-3](https://img.shields.io/badge/License-GPL3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+<!-- badges: end -->
+
+
+
+--------------
+
+
+## Here are some check boxes
+
 * [x] checkbox
 * [ ] checkbox
 * bullet

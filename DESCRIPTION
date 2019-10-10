@@ -6,15 +6,18 @@ Authors@R:
     person(given = "Stu",
            family = "Field",
            role = c("aut", "cre"),
-           email = "sfield@somalogic.com")
+           email = "stu.g.field@gmail.com")
 Description: Just a test package to debug devtools and builds.
 License: GPL-3 | file LICENSE
-URL: www.google.com
+URL: http://github.com/stufield
 Depends:
     R (>= 3.5.0)
 Imports:
     dplyr (>= 0.8.0),
     magrittr,
+    httr,
+    jsonlite,
+    stringr,
     purrr (>= 0.3.0),
     rlang (>= 0.1.2)
 Suggests:

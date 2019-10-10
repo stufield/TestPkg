@@ -7,3 +7,4 @@ prepNorm_speed_test.R
 ^\.travis\.yml$
 ^codecov\.yml$
 ^\.covrignore$
+^\.lintr$
