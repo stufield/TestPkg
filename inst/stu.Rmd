@@ -1,0 +1,17 @@
+---
+output: html_document
+---
+
+```{r}
+getwd()
+here::here()
+here::dr_here()
+projfile    <- "SomaPipeline.Rproj"
+root        <- rprojroot::find_root_file(criterion = projfile)
+devel       <- fs::file_exists(fs::path(root, projfile))    # used in Appendix A
+project_loc <- fs::path(root, ifelse(devel, "inst/POC", "POC"))
+projfile
+root
+devel
+project_loc
+```

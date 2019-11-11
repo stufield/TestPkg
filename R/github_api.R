@@ -25,7 +25,7 @@ github_api <- function(path) {
     rlang::signal(
       stringr::str_glue(
         "GitHub API request failed:
-        [{status_code(resp)}]
+        [{httr::status_code(resp)}]
         {parsed$message}
         <{parsed$documentation_url}>"
         ), "error")

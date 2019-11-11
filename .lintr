@@ -1,26 +1,3 @@
 exclusions: list(
   "tests/testthat.R"
   )
-linters: with_defaults(
-  # lintr defaults
-  camel_case_linter = NULL,         # not for somaverse
-  spaces_inside_linter = NULL,      # ignore default linter
-  infix_spaces_linter = NULL,       # we use our own infix2 linter
-  commented_code_linter = NULL,     # comments are ok, for now
-  multiple_dots_linter = NULL,      # these are ok, soon deprecated anyhow
-  line_length_linter(90L)
-  # somaverse linters
-  #somaverse::infix_spaces_linter2,
-  #somaverse::deprecated_linter,
-  #somaverse::preferred_linter,
-  #somaverse::tab_three_linter,
-  #somaverse::comment_nospace_linter,
-  #somaverse::roxygen_nospace_linter,
-  #somaverse::spaces_left_if_linter,
-  #somaverse::spaces_right_if_linter,
-  #somaverse::T_and_F_symbol_linter,
-  #somaverse::equals_na_linter,
-  #somaverse::function_left_parentheses_linter,
-  #somaverse::nonportable_path_linter,
-  #somaverse::pipe_continuation_linter
-  )
