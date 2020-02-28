@@ -1,10 +1,8 @@
-context("Testing the `calcCCC` Function -> Concordance Correlation Coefficient")
 
-set.seed(101)
-x <- rnorm(100)
-y <- rnorm(100)
-
-test_that("calcCCC unit test", {
+test_that("calcCCC returns correct values on 2 100 random Gaussian vectors", {
+  set.seed(101)
+  x <- rnorm(100)
+  y <- rnorm(100)
   ccc <- calcCCC(x, y)
   expect_error(calcCCC(x, c(y, 1)))
   expect_named(ccc, c("rho.c", "ci95", "Z", "p.value"))

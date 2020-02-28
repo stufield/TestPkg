@@ -11,9 +11,9 @@ Description: Just a test package to debug devtools and builds.
 License: GPL-3 | file LICENSE
 URL: http://github.com/stufield
 Depends:
-    R (>= 3.5.0)
+    R (>= 3.6.0)
 Imports:
-    dplyr (>= 0.8.0),
+    dplyr (>= 0.8.4),
     magrittr,
     httr,
     jsonlite,
@@ -24,11 +24,13 @@ Suggests:
     covr,
     devtools (>= 2.0.1),
     knitr (>= 1.17),
+    lintr (>= 2.0.0),
     rmarkdown (>= 1.10),
     roxygen2 (>= 6.1.0),
     spelling (>= 1.2),
     testthat (>= 2.0.0),
-    usethis (>= 1.4.0)
+    usethis (>= 1.4.0),
+    withr (>= 2.1.2)
 Enhances:
     SomaPlyr
 VignetteBuilder: 
@@ -38,5 +40,5 @@ Language: en-US
 LazyData: true
 LazyLoad: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 X-CRAN-COMMENT: **add extra comments here**

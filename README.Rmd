@@ -1,12 +1,11 @@
 ---
 output: 
   github_document:
-    html_preview: true
+    html_preview: false
 ---
 
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-<!-- BLAH -->
 
 
 ```{r, echo = FALSE}
