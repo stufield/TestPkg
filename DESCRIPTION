@@ -13,13 +13,18 @@ URL: http://github.com/stufield
 Depends:
     R (>= 3.6.0)
 Imports:
+    desc,
     dplyr (>= 0.8.4),
     magrittr,
+    fs,
+    git2r,
     httr,
     jsonlite,
+    pkgdown,
     stringr,
     purrr (>= 0.3.0),
-    rlang (>= 0.1.2)
+    rlang (>= 0.1.2),
+    usethis (>= 1.5.1)
 Suggests:
     covr,
     devtools (>= 2.0.1),
@@ -29,7 +34,6 @@ Suggests:
     roxygen2 (>= 6.1.0),
     spelling (>= 1.2),
     testthat (>= 2.0.0),
-    usethis (>= 1.4.0),
     withr (>= 2.1.2)
 Enhances:
     SomaPlyr
