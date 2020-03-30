@@ -1,4 +1,5 @@
-
+# This tests the subset argument of getAptamerDilution()
+# for speed
 reprex::reprex({
   suppressMessages(require(SomaNormalization))
   t <- Sys.time()
