@@ -6,8 +6,8 @@
 <!-- badges: start -->
 
 [![build](https://img.shields.io/badge/build-passing-success.svg?logo=travis)](http://bitbucket.sladmin.com/projects/SV/repos/somareadr/commits)
-![coverage](https://img.shields.io/badge/coverage-18.3%25-critical.svg?style=flat&logo=codecov)
-![lint](https://img.shields.io/badge/lints-61-critical.svg?style=flat&logo=gitlab)
+![coverage](https://img.shields.io/badge/coverage-41.5%25-critical.svg?style=flat&logo=codecov)
+![lint](https://img.shields.io/badge/lints-30-critical.svg?style=flat&logo=gitlab)
 [![docs](https://img.shields.io/badge/docs-passing-success.svg)](http://bitbucket.sladmin.com/projects/SV/repos/somareadr/browse)
 [![License:
 GPL-3](https://img.shields.io/badge/License-GPL3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -17,8 +17,8 @@ GPL-3](https://img.shields.io/badge/License-GPL3-blue.svg)](https://www.gnu.org/
 
 ## Here are some check boxes
 
-  - \[x\] checkbox
-  - \[ \] checkbox
+  - [x] checkbox
+  - [ ] checkbox
   - bullet
 
 -----
@@ -68,4 +68,4 @@ terms.
 -----
 
 Created by [Rmarkdown](https://github.com/rstudio/rmarkdown) (v2.1) and
-R version 3.6.2 (2019-12-12).
+R version 3.6.3 (2020-02-29).
