@@ -14,10 +14,10 @@ Hit the GitHub API
 }
 \examples{
 # My GitHub user account
-github_api("/users/stufield")
+tryCatch(github_api("/users/stufield"), error = function(e) e)
 
 # This package repo
-github_api("/repos/stufield/TestPkg")
+tryCatch(github_api("/repos/stufield/TestPkg"), error = function(e) e)
 }
 \author{
 Stu Field

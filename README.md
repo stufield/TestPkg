@@ -1,33 +1,32 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
+<!-- [![build](https://img.shields.io/badge/build-passing-success.svg?logo=travis)](http://bitbucket.sladmin.com/projects/SV/repos/somareadr/commits) -->
+<!-- ![coverage](NA) -->
+<!-- ![lint](NA) -->
+<!-- [![docs](https://img.shields.io/badge/docs-passing-success.svg)](http://bitbucket.sladmin.com/projects/SV/repos/somareadr/browse) -->
+<!-- [![License: GPL-3](https://img.shields.io/badge/License-GPL3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) -->
+<!-- badges: end -->
 
 # The `TestPkg` package
 
-<!-- badges: start -->
+This is just a testing sandbox for package development.
 
-[![build](https://img.shields.io/badge/build-passing-success.svg?logo=travis)](http://bitbucket.sladmin.com/projects/SV/repos/somareadr/commits)
-![coverage](https://img.shields.io/badge/coverage-41.5%25-critical.svg?style=flat&logo=codecov)
-![lint](https://img.shields.io/badge/lints-30-critical.svg?style=flat&logo=gitlab)
-[![docs](https://img.shields.io/badge/docs-passing-success.svg)](http://bitbucket.sladmin.com/projects/SV/repos/somareadr/browse)
-[![License:
-GPL-3](https://img.shields.io/badge/License-GPL3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-<!-- badges: end -->
-
------
+------------------------------------------------------------------------
 
 ## Here are some check boxes
 
-  - [x] checkbox
-  - [ ] checkbox
-  - bullet
+-   [x] checkbox
+-   [ ] checkbox
+-   bullet
 
------
+------------------------------------------------------------------------
 
 ## Overview
 
 Just a test package to debug devtools and builds.
 
------
+------------------------------------------------------------------------
 
 ## Installation
 
@@ -53,11 +52,11 @@ library(TestPkg)
 
 ## Notes about the package
 
-  - The `TestPkg` package is easy to use.
+-   The `TestPkg` package is easy to use.
 
-  - There is some cool stuff we can do.
+-   There is some cool stuff we can do.
 
------
+------------------------------------------------------------------------
 
 #### LICENSE
 
@@ -65,7 +64,7 @@ Please note that this SomaLogic, Inc. internal package is released with
 a [LICENSE](LICENSE). By using in this package you agree to abide by its
 terms.
 
------
+------------------------------------------------------------------------
 
-Created by [Rmarkdown](https://github.com/rstudio/rmarkdown) (v2.1) and
-R version 3.6.3 (2020-02-29).
+Created by [Rmarkdown](https://github.com/rstudio/rmarkdown) (v2.9) and
+R version 4.1.0 (2021-05-18).

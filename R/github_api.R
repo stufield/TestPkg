@@ -4,10 +4,10 @@
 #' @param path String of the endpoint destination
 #' @examples
 #' # My GitHub user account
-#' github_api("/users/stufield")
+#' tryCatch(github_api("/users/stufield"), error = function(e) e)
 #'
 #' # This package repo
-#' github_api("/repos/stufield/TestPkg")
+#' tryCatch(github_api("/repos/stufield/TestPkg"), error = function(e) e)
 #' @author Stu Field
 #' @importFrom httr status_code user_agent GET modify_url content
 #' @export

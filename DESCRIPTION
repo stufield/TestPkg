@@ -15,34 +15,30 @@ Depends:
 Imports:
     desc,
     dplyr (>= 0.8.4),
+    httr,
     magrittr,
     fs,
-    git2r,
-    httr,
-    jsonlite,
-    pkgdown,
     stringr,
     purrr (>= 0.3.0),
     rlang (>= 0.1.2),
-    usethis (>= 1.5.1)
+    usethis (>= 1.5.1),
+    withr (>= 2.1.2)
 Suggests:
     covr,
     devtools (>= 2.0.1),
+    jsonlite,
     knitr (>= 1.17),
     lintr (>= 2.0.0),
     rmarkdown (>= 1.10),
-    roxygen2 (>= 6.1.0),
     spelling (>= 1.2),
-    testthat (>= 2.0.0),
-    withr (>= 2.1.2)
-Enhances:
-    SomaPlyr
+    testthat (>= 2.0.0)
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
 Language: en-US
-LazyData: true
 LazyLoad: true
+LazyData: true
+LazyDataCompression: xz
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 X-CRAN-COMMENT: **add extra comments here**
