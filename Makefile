@@ -16,6 +16,13 @@ roxygen:
 	@ $(RSCRIPT) \
 	-e "devtools::document(roclets = c('rd', 'collate', 'namespace'))"
 
+readme:
+	@ echo "Rendering README.Rmd"
+	@ $(RSCRIPT) \
+	-e "Sys.setenv(RSTUDIO_PANDOC='/Applications/RStudio.app/Contents/MacOS/pandoc')" \
+	-e "rmarkdown::render('README.Rmd', quiet = TRUE)"
+	@ $(RM) README.html
+
 test:
 	@ $(RSCRIPT) \
 	-e "Sys.setenv(ON_JENKINS = 'true', TZ = 'America/Denver')" \
@@ -42,4 +49,4 @@ install: install_deps build
 
 clean:
 	@ cd ..;\
-	$(RM) -rf $(PKGNAME)_$(PKGVERS).tar.gz $(PKGNAME).Rcheck
+	$(RM) $(PKGNAME)_$(PKGVERS).tar.gz $(PKGNAME).Rcheck
