@@ -16,7 +16,6 @@ Imports:
     desc,
     dplyr,
     httr,
-    magrittr,
     Rcpp,
     fs,
     usethis
