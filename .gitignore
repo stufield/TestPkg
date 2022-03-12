@@ -11,3 +11,4 @@ inst/doc/*
 # ignore all packrat related files
 .project
 packrat/lib*/
+inst/doc
