@@ -13,22 +13,22 @@ URL: http://github.com/stufield
 Depends:
     R (>= 4.0.0), withr
 Imports:
-    desc,
     dplyr,
-    httr,
-    Rcpp,
     fs,
-    usethis
+    httr,
+    Rcpp
 Suggests:
     covr,
+    desc,
     gh,
     devtools,
     jsonlite,
     knitr,
-    lintr (>= 2.1.0),
+    lintr (>= 2.0.1),
     rmarkdown,
     spelling,
-    testthat
+    testthat,
+    usethis
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
