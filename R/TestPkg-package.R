@@ -1,9 +1,11 @@
-
-#' @keywords internal package
+#' @keywords internal
+#' @import withr
 "_PACKAGE"
 
+## TestPkg namespace: start
 #' @useDynLib TestPkg, .registration = TRUE
 #' @importFrom Rcpp sourceCpp
+## TestPkg namespace: end
 NULL
 
 # for use with usethis::use_release_issue

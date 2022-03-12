@@ -19,8 +19,7 @@
 #' allSame(letters)
 #' allSame(c(TRUE, TRUE, TRUE))
 #' allSame(c(TRUE, TRUE, FALSE))
-#' @importFrom purrr map_lgl
-#' @export allSame
+#' @export
 allSame <- function(x) UseMethod("allSame")
 
 
@@ -40,10 +39,9 @@ allSame.numeric <- function(x) {
 #' S3 allSame method for character
 #'
 #' @noRd
-#' @importFrom purrr map_lgl
 #' @export
 allSame.character <- function(x) {
-  isTRUE(all(purrr::map_lgl(x, function(i) i == x[1])))
+  isTRUE(all(vapply(x, function(i) i == x[1L], NA)))
 }
 
 #' S3 allSame method for factor

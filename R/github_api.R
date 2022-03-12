@@ -1,4 +1,3 @@
-
 #' Hit the GitHub API
 #'
 #' @param path String of the endpoint destination
@@ -9,26 +8,26 @@
 #' # This package repo
 #' tryCatch(github_api("/repos/stufield/TestPkg"), error = function(e) e)
 #' @author Stu Field
-#' @importFrom httr status_code user_agent GET modify_url content
+#' @importFrom httr status_code user_agent GET modify_url content http_type
 #' @export
 github_api <- function(path) {
-  url  <- httr::modify_url("https://api.github.com", path = path)
-  resp <- httr::GET(url, httr::user_agent("http://github.com/stufield"))
+  url  <- modify_url("https://api.github.com", path = path)
+  resp <- GET(url, user_agent("http://github.com/stufield"))
 
-  if ( httr::http_type(resp) != "application/json" ) {
-    rlang::signal("API did not return json", "error")
+  if ( http_type(resp) != "application/json" ) {
+    stop("API did not return json", call. = FALSE)
   }
 
-  parsed <- jsonlite::fromJSON(httr::content(resp, "text"), simplifyVector = FALSE)
+  parsed <- jsonlite::fromJSON(content(resp, "text"), simplifyVector = FALSE)
 
-  if ( httr::status_code(resp) != 200 ) {
-    rlang::signal(
-      stringr::str_glue(
-        "GitHub API request failed:
-        [{httr::status_code(resp)}]
-        {parsed$message}
-        <{parsed$documentation_url}>"
-        ), "error")
+  if ( status_code(resp) != 200 ) {
+    stop(
+      "GitHub API request failed:\n",
+      "[", status_code(resp), "]\n",
+      parsed$message, "\n<",
+      parsed$documentation_url, ">",
+      call. = FALSE
+    )
   }
 
   structure(

@@ -24,15 +24,14 @@
 #' # determine the compression ('xz')
 #' getCompression("outfile.rda")
 #' }
-#' @importFrom fs path_ext
-#' @importFrom usethis ui_stop ui_value
+#' @importFrom fs path_ext `path_ext<-`
 #' @export
 save_rds <- function(object, file) {
-  ext <- fs::path_ext(file)
+  ext <- path_ext(file)
   if ( "rds" != tolower(ext) ) {
-    usethis::ui_stop("Incorrect file extension to `*.rds` file: {ui_value(ext)}")
+    stop(paste("Incorrect file extension to `*.rds` file:", value(ext)), call. = FALSE)
   }
-  fs::path_ext(file) <- tolower(ext)
+  path_ext(file) <- tolower(ext)
   con <- xzfile(file)
   on.exit(close(con))
   saveRDS(object, con)
@@ -41,17 +40,16 @@ save_rds <- function(object, file) {
 
 #' @describeIn save_rds
 #' similar to [save_rds()], but for saving serialized `*.rda` compressed files.
-#' @importFrom rlang caller_env
 #' @export
 save_rda <- function(..., file) {
-  ext <- fs::path_ext(file)
+  ext <- path_ext(file)
   if ( "rda" != tolower(ext) ) {
-    usethis::ui_stop("Incorrect file extension to `*.rda` file: {ui_value(ext)}")
+    stop(paste("Incorrect file extension to `*.rda` file:", value(ext)), call. = FALSE)
   }
-  fs::path_ext(file) <- tolower(ext)
+  path_ext(file) <- tolower(ext)
   con <- xzfile(file)
   on.exit(close(con))
-  save(..., file = con, envir = rlang::caller_env())
+  save(..., file = con, envir = parent.frame(n = 1))
   invisible(file)
 }
 

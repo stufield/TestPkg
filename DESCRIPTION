@@ -11,29 +11,25 @@ Description: Just a test package to debug devtools and builds.
 License: GPL-3 | file LICENSE
 URL: http://github.com/stufield
 Depends:
-    R (>= 3.6.0)
+    R (>= 4.0.0), withr
 Imports:
     desc,
-    dplyr (>= 0.8.4),
+    dplyr,
     httr,
     magrittr,
+    Rcpp,
     fs,
-    stringr,
-    purrr (>= 0.3.0),
-    rlang (>= 0.1.2),
-    usethis (>= 1.5.1),
-    withr (>= 2.1.2),
-    Rcpp
+    usethis
 Suggests:
     covr,
     gh,
-    devtools (>= 2.0.1),
+    devtools,
     jsonlite,
-    knitr (>= 1.17),
-    lintr (>= 2.0.0),
-    rmarkdown (>= 1.10),
-    spelling (>= 1.2),
-    testthat (>= 2.0.0)
+    knitr,
+    lintr (>= 2.1.0),
+    rmarkdown,
+    spelling,
+    testthat
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
