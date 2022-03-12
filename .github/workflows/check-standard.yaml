@@ -87,12 +87,6 @@ jobs:
           sessioninfo::session_info(pkgs, include_base = TRUE)
         shell: Rscript {0}
 
-      - name: Makevars
-        run: |
-          mkdir ~/.R
-          echo "CXXFLAGS=-g -O3 -Wall -pipe -Wno-unused -pedantic" > ~/.R/Makevars
-        shell: bash
-
       - name: Check
         env:
           _R_CHECK_CRAN_INCOMING_REMOTE_: false
