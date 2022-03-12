@@ -26,6 +26,7 @@ Imports:
     Rcpp
 Suggests:
     covr,
+    gh,
     devtools (>= 2.0.1),
     jsonlite,
     knitr (>= 1.17),
