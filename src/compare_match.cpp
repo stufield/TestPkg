@@ -4,7 +4,7 @@
 using namespace Rcpp;
 
 // [[Rcpp::export]]
-IntegerVector match_(const CharacterVector& x,
+IntegerVector match1(const CharacterVector& x,
                      const CharacterVector& table) {
 
   typedef std::unordered_map<SEXP,int> MAP ;
@@ -15,7 +15,7 @@ IntegerVector match_(const CharacterVector& x,
   int n = table.size() ;
   SEXP* ptr = get_string_ptr(table) ;
   for( int i = 0 ; i < n; i++) {
-    hash.insert( std::make_pair<SEXP,int>(ptr[i], i + 1) ) ;
+    hash.insert( std::make_pair(ptr[i], i + 1) ) ;
   }
 
   n = x.size() ;
@@ -40,12 +40,10 @@ IntegerVector match2( const CharacterVector& x, const CharacterVector& table) {
 }
 
 /*** R
-  set.seed(101)
-  x <- sample(LETTERS, 100000, replace = TRUE)
+  x <- withr::with_seed(101, sample(LETTERS, 100000, replace = TRUE))
   bnch <- bench::mark(
-    match_ = match_(x, LETTERS),
-    match2 = match2(x, LETTERS),
-    iterations = 1000
+    match1 = match1(x, LETTERS),
+    match2 = match2(x, LETTERS)
   )
   bnch
   summary(bnch, relative = TRUE)

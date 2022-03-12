@@ -16,15 +16,15 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// match_
-IntegerVector match_(const CharacterVector& x, const CharacterVector& table);
-RcppExport SEXP _TestPkg_match_(SEXP xSEXP, SEXP tableSEXP) {
+// match1
+IntegerVector match1(const CharacterVector& x, const CharacterVector& table);
+RcppExport SEXP _TestPkg_match1(SEXP xSEXP, SEXP tableSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const CharacterVector& >::type x(xSEXP);
     Rcpp::traits::input_parameter< const CharacterVector& >::type table(tableSEXP);
-    rcpp_result_gen = Rcpp::wrap(match_(x, table));
+    rcpp_result_gen = Rcpp::wrap(match1(x, table));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -74,7 +74,7 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_TestPkg_calcL1", (DL_FUNC) &_TestPkg_calcL1, 1},
-    {"_TestPkg_match_", (DL_FUNC) &_TestPkg_match_, 2},
+    {"_TestPkg_match1", (DL_FUNC) &_TestPkg_match1, 2},
     {"_TestPkg_match2", (DL_FUNC) &_TestPkg_match2, 2},
     {"_TestPkg_prod_cpp", (DL_FUNC) &_TestPkg_prod_cpp, 1},
     {"_TestPkg_prodMat", (DL_FUNC) &_TestPkg_prodMat, 1},

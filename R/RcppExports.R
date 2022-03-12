@@ -5,8 +5,8 @@ calcL1 <- function(e) {
     .Call(`_TestPkg_calcL1`, e)
 }
 
-match_ <- function(x, table) {
-    .Call(`_TestPkg_match_`, x, table)
+match1 <- function(x, table) {
+    .Call(`_TestPkg_match1`, x, table)
 }
 
 match2 <- function(x, table) {
