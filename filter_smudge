@@ -1,0 +1,14 @@
+#!/bin/bash
+# --------------------------------------------
+# This run on a checkout from a branch/repository
+# it replaces the words:
+#   $commit$
+#   $date$
+#   $author$"
+# --------------------------------------------
+cursha=$(git log --format='%h' -1)
+curdate=$(git log --format='%ad' -1)
+curauth=$(git log --format='%an' -1)
+sed -e "s/[$]commit[$]/\$commit: $cursha \$/" \
+  -e "s/[$]date[$]/\$date: $curdate \$/" \
+  -e "s/[$]author[$]/\$author: $curauth \$/"

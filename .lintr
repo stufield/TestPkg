@@ -1,3 +1,12 @@
+linters: with_defaults(
+  default = somaverse::soma_linters(),
+  object_name_linter = NULL    # too many FPs
+  )
 exclusions: list(
+  "R/parseHeader.R",
+  "R/diffAdats.R"  = c(37, 173, 181),
+  "R/parseCheck.R" = c(108, 252),
+  "tests/testthat/helper.R",
+  "tests/testthat/test-createSimTestData.R",
   "tests/testthat.R"
   )

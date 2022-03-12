@@ -1,0 +1,8 @@
+#!/bin/bash
+# --------------------------------------------
+# This runs when files are staged
+# puts back the way they are in the repository
+# --------------------------------------------
+sed -e "s/[$]commit:.*[$]/\$commit\$/" \
+  -e "s/[$]date:.*[$]/\$date\$/" \
+  -e "s/[$]author:.*[$]/\$author\$/"
